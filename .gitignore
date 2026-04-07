@@ -1,0 +1,42 @@
+# --- Carpeta de salida de Gradle ---
+build/
+bin/
+out/
+
+# --- Gradle y el Wrapper ---
+.gradle/
+/build/
+
+# Opcional: Si NO quieres subir el wrapper (aunque se recomienda subirlo)
+# !gradle/wrapper/gradle-wrapper.jar
+# !gradlew
+# !gradlew.bat
+
+# --- IDEs ---
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+# No ignorar el archivo de estilos de código si el equipo lo usa
+# !.idea/codeStyles/
+
+# Visual Studio Code
+.vscode/
+
+# Eclipse
+.classpath
+.project
+.settings/
+.factorypath
+
+# --- Archivos del sistema y logs ---
+*.log
+.DS_Store
+Thumbs.db
+
+# --- WSL2 / Linux específicos ---
+*.swp
+*~

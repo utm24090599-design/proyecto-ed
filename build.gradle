@@ -1,0 +1,25 @@
+plugins {
+    id 'application'
+    // Actualizamos a la 0.1.0 para evitar el error del OsDetector
+    id 'org.openjfx.javafxplugin' version '0.1.0' 
+}
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        // Esto asegura que Gradle use exactamente tu Java 17 instalado
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+javafx {
+    version = "17.0.10" 
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+application {
+    mainClass = 'com.panwcorp.MainApp' // Asegúrate de que coincida con tu paquete/clase
+}
