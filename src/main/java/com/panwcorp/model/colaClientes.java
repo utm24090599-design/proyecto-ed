@@ -3,7 +3,7 @@ package com.panwcorp.model;
 import java.util.ArrayList;
 import java.util.List;
 
-// PUNTO 1: Cola de clientes (implementación manual con nodos)
+// PUNTO 1: Cola de clientes (implementacion manual con nodos)
 public class colaClientes {
 
     private static class Nodo {

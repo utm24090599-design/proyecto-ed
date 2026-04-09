@@ -12,7 +12,7 @@ public class Turnosview {
 
     private final colaClientes cola = new colaClientes();
 
-    // Componentes dinámicos
+   
     private Label lblSiguiente;
     private Label lblEsperando;
     private Label lblTotal;
@@ -20,16 +20,16 @@ public class Turnosview {
 
     public void mostrar(Stage stage) {
 
-        // ── HEADER ───────────────────────────────────────────
+        // HEADER 
         Label titulo = new Label("Cafeteria — Gestión de Turnos");
         titulo.getStyleClass().add("titulo");
         HBox header = new HBox(titulo);
         header.setAlignment(Pos.CENTER);
         header.getStyleClass().add("header");
 
-        // ── CARDS DE INFO ────────────────────────────────────
+        //CARDS DE INFO 
 
-        // Card: Próximo a ser atendido (equivalente a cola.peek())
+        // Card: Proximo a ser atendido (equivalente a cola.peek())
         lblSiguiente = new Label("Sin clientes");
         lblSiguiente.getStyleClass().add("valor-siguiente");
         Label etqSiguiente = new Label("Próximo a ser atendido");
@@ -60,7 +60,7 @@ public class Turnosview {
         panelInfo.setAlignment(Pos.CENTER);
         panelInfo.setPadding(new Insets(20, 30, 10, 30));
 
-        // ── BOTONES ──────────────────────────────────────────
+        // BOTONES 
 
         // Equivalente a: cola.add(totalPersonas)
         Button btnLlega = new Button("+ Cliente llega");
@@ -74,7 +74,7 @@ public class Turnosview {
         controles.setAlignment(Pos.CENTER);
         controles.setPadding(new Insets(10, 30, 10, 30));
 
-        // ── COLA VISUAL ──────────────────────────────────────
+        // COLA VISUAL
         Label lblTituloLista = new Label("Cola de espera:");
         lblTituloLista.getStyleClass().add("titulo-lista");
 
@@ -85,7 +85,7 @@ public class Turnosview {
         VBox panelLista = new VBox(8, lblTituloLista, listaEspera);
         panelLista.setPadding(new Insets(0, 30, 15, 30));
 
-        // ── LOG (equivalente al System.out.println del original)
+        // LOG (equivalente al System.out.println)
         Label lblLog = new Label("Registro de eventos:");
         lblLog.getStyleClass().add("titulo-lista");
 
@@ -97,11 +97,11 @@ public class Turnosview {
         VBox panelLog = new VBox(5, lblLog, logArea);
         panelLog.setPadding(new Insets(0, 30, 20, 30));
 
-        // ── LAYOUT PRINCIPAL ─────────────────────────────────
+        // LAYOUT PRINCIPAL 
         VBox root = new VBox(header, panelInfo, controles, panelLista, panelLog);
         root.getStyleClass().add("root");
 
-        // ── LÓGICA DE BOTONES ────────────────────────────────
+        // LOGICA DE BOTONES
 
         // Equivalente a: cola.add(totalPersonas)
         btnLlega.setOnAction(e -> {
@@ -128,7 +128,7 @@ public class Turnosview {
             log(logArea, "---");
         });
 
-        // ── ESCENA ───────────────────────────────────────────
+        // ESCENA 
         Scene scene = new Scene(root, 660, 620);
        
 
