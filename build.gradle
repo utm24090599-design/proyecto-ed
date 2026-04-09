@@ -11,12 +11,12 @@ repositories {
 java {
     toolchain {
         // Esto asegura que Gradle use exactamente tu Java 17 instalado
-        languageVersion = JavaLanguageVersion.of(17)
+        languageVersion = JavaLanguageVersion.of(25)
     }
 }
 
 javafx {
-    version = "17.0.10" 
+    version = "25.0.2" 
     modules = [ 'javafx.controls', 'javafx.fxml' ]
 }
 
@@ -29,5 +29,5 @@ sourceSets {
 }
 
 application {
-    mainClass = 'com.panwcorp.Main' // Asegúrate de que coincida con tu paquete/clase
+    mainClass = 'com.panwcorp.MainApp' // Asegúrate de que coincida con tu paquete/clase
 }
