@@ -20,6 +20,14 @@ javafx {
     modules = [ 'javafx.controls', 'javafx.fxml' ]
 }
 
+sourceSets {
+    main {
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+}
+
 application {
-    mainClass = 'com.panwcorp.MainApp' // Asegúrate de que coincida con tu paquete/clase
+    mainClass = 'com.panwcorp.Main' // Asegúrate de que coincida con tu paquete/clase
 }
