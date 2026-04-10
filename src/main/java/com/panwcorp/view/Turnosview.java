@@ -1,5 +1,6 @@
 package com.panwcorp.view;
 
+import com.panwcorp.model.HistorialPedidos;
 import com.panwcorp.model.colaClientes;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -11,12 +12,17 @@ import javafx.stage.Stage;
 public class Turnosview {
 
     private final colaClientes cola = new colaClientes();
+    private final HistorialPedidos historial;
 
    
     private Label lblSiguiente;
     private Label lblEsperando;
     private Label lblTotal;
     private ListView<String> listaEspera;
+
+    public Turnosview(HistorialPedidos historial) {
+        this.historial = historial;
+    }
 
     public void mostrar(Stage stage) {
 
@@ -70,7 +76,11 @@ public class Turnosview {
         Button btnAtender = new Button("  Cajero libre — Llamar siguiente");
         btnAtender.getStyleClass().add("btn-atender");
 
-        HBox controles = new HBox(12, btnLlega, btnAtender);
+        // Botón para abrir el historial de pedidos
+        Button btnHistorial = new Button("📋 Historial de Pedidos");
+        btnHistorial.getStyleClass().add("btn-agregar");
+
+        HBox controles = new HBox(12, btnLlega, btnAtender, btnHistorial);
         controles.setAlignment(Pos.CENTER);
         controles.setPadding(new Insets(10, 30, 10, 30));
 
@@ -128,8 +138,14 @@ public class Turnosview {
             log(logArea, "---");
         });
 
+        // Abrir ventana de historial de pedidos
+        btnHistorial.setOnAction(e -> {
+            Stage stageHistorial = new Stage();
+            new HistorialView(historial).mostrar(stageHistorial);
+        });
+
         // ESCENA 
-        Scene scene = new Scene(root, 660, 620);
+        Scene scene = new Scene(root, 860, 620);
        
 
         stage.setTitle("Cafetería — Sistema de Turnos");
