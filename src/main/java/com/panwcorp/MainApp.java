@@ -14,16 +14,15 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage stage) {
-        new Turnosview().mostrar(stage);
+        historial = new HistorialPedidos();
+
+        new Turnosview(historial).mostrar(stage);
 
         Stage ventanaEstaciones = new Stage();
         new EstacionesView().mostrar(ventanaEstaciones);
 
         Stage ventanaHistorial = new Stage();
-        new HistorialView().mostrar(ventanaHistorial);
-        // Instanciar el historial de pedidos
-        historial = new HistorialPedidos();
-        new Turnosview(historial).mostrar(stage);
+        new HistorialView(historial).mostrar(ventanaHistorial);
     }
 
     public static void main(String[] args) {

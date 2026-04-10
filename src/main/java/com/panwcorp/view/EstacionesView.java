@@ -17,7 +17,7 @@ public class EstacionesView {
     // ── Modelo ───────────────────────────────────────────────────────────────
     private final ColaCircular cola = new ColaCircular();
 
-    private static final String[] NOMBRES = {"☕ Bebidas", "🍲 Comida Caliente", "🍿 Snacks"};
+    private static final String[] NOMBRES = {"Bebidas", "Comida Caliente", "Snacks"};
     private static final String[] COLORES = {"#4A90D9", "#E8724A", "#6BBF59"};
 
     // ── Nodos que se actualizan ──────────────────────────────────────────────

@@ -58,12 +58,3 @@
     -fx-border-radius: 5px;
     -fx-background-radius: 5px;
 }
-
-.tab-pane .tab {
-    -fx-background-color: #e9ecef;
-}
-
-.tab-pane .tab:selected {
-    -fx-background-color: #007bff;
-    -fx-text-fill: white;
-}
