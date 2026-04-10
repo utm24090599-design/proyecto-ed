@@ -1,9 +1,9 @@
 package com.panwcorp;
 
-
+import com.panwcorp.view.CatalogoView;
 import com.panwcorp.view.EstacionesView;
-import com.panwcorp.view.HistorialView;
 import com.panwcorp.model.HistorialPedidos;
+import com.panwcorp.view.HistorialView;
 import com.panwcorp.view.Turnosview;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -23,6 +23,9 @@ public class MainApp extends Application {
 
         Stage ventanaHistorial = new Stage();
         new HistorialView(historial).mostrar(ventanaHistorial);
+
+        Stage ventanaCatalogo = new Stage();
+        new CatalogoView().mostrar(ventanaCatalogo);
     }
 
     public static void main(String[] args) {
